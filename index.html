@@ -13,15 +13,13 @@
     <nav class="fixed top-0 w-full z-50 backdrop-blur-xl bg-gray-900/80 border-b border-gray-700/50">
         <div class="w-full max-w-[1920px] mx-auto px-12 py-5">
             <div class="flex items-center justify-between">
-                <div class="text-2xl font-semibold bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
-                    Portfolio
-                </div>
+                <a href="index.html" class="text-2xl font-semibold bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
+                    ANT
+                </a>
                 <div class="hidden md:flex space-x-8">
                     <a href="#home" class="nav-link text-gray-300 hover:text-green-400 transition-colors">Home</a>
                     <a href="#about" class="nav-link text-gray-300 hover:text-blue-400 transition-colors">About</a>
                     <a href="#skills" class="nav-link text-gray-300 hover:text-green-400 transition-colors">Skills</a>
-                    <a href="#projects" class="nav-link text-gray-300 hover:text-blue-400 transition-colors">Projects</a>
-                    <a href="#documents" class="nav-link text-gray-300 hover:text-green-400 transition-colors">Documents & Certificates</a>
                     <a href="#contact" class="nav-link text-gray-300 hover:text-blue-400 transition-colors">Contact</a>
                 </div>
                 <button class="md:hidden text-gray-300" id="mobile-menu-btn">
@@ -35,15 +33,13 @@
                 <a href="#home" class="block nav-link text-gray-300 hover:text-green-400 transition-colors">Home</a>
                 <a href="#about" class="block nav-link text-gray-300 hover:text-blue-400 transition-colors">About</a>
                 <a href="#skills" class="block nav-link text-gray-300 hover:text-green-400 transition-colors">Skills</a>
-                <a href="#projects" class="block nav-link text-gray-300 hover:text-blue-400 transition-colors">Projects</a>
-                <a href="#documents" class="block nav-link text-gray-300 hover:text-green-400 transition-colors">Documents & Certificates</a>
                 <a href="#contact" class="block nav-link text-gray-300 hover:text-blue-400 transition-colors">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Home Section -->
-    <section id="home" class="pt-24 pb-16 px-12 h-screen flex items-center relative overflow-hidden" style="width: 1920px; max-width: 1920px; margin: 0 auto;">
+    <section id="home" class="pt-24 pb-16 px-12 h-screen flex items-center relative overflow-hidden bg-gray-900" style="width: 1920px; max-width: 1920px; margin: 0 auto;">
         <!-- Animated Background Elements -->
         <div class="absolute inset-0 overflow-hidden pointer-events-none">
             <!-- Gradient Orbs -->
@@ -64,34 +60,38 @@
         
         <div class="w-full max-w-[1920px] mx-auto relative z-10">
             <div class="text-center">
-                <div class="flex items-center justify-center gap-3 mb-6 animate-fade-in-up">
-                    <h1 class="text-7xl font-bold bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent leading-tight animate-gradient-shift">
+                <div class="mb-4 animate-fade-in-up">
+                    <h1 class="text-7xl font-bold bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent leading-tight animate-gradient-shift mb-2">
                         Aeron Tumanon
                     </h1>
-                    <span class="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50"></span>
                 </div>
-                <p class="text-2xl text-gray-400 mb-2 animate-fade-in-up-delayed">Full Stack Developer / UI UX Designer</p>
-                <p class="text-xl text-gray-500 mb-4 animate-fade-in-up-delayed">3rd Year BSIT Student at Filamer Christian University</p>
-                <div class="h-20 flex items-center justify-center mb-8 animate-fade-in-up-delayed-2">
-                    <div class="text-3xl font-medium text-gray-300 relative">
-                        <span class="inline-block">Building with </span>
-                        <span id="changing-text" class="inline-block bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent font-bold"></span>
-                        
+                <p class="text-3xl font-semibold text-gray-300 mb-2 animate-fade-in-up-delayed">Full Stack Developer</p>
+                <p class="text-lg text-gray-500 mb-6 animate-fade-in-up-delayed">3rd Year BSIT Student at Filamer Christian University</p>
+                
+                <div class="mb-6 animate-fade-in-up-delayed-2 flex items-center justify-center">
+                    <div class="flex items-center justify-center gap-3 font-mono text-center">
+                        <span class="w-3 h-3 bg-blue-500 rounded-full"></span>
+                        <span class="text-gray-300">Building with</span>
+                        <span id="changing-text" class="text-blue-400 font-semibold min-w-[180px] text-center"></span>
                     </div>
                 </div>
-                <div class="text-xl text-gray-400 italic max-w-3xl mx-auto animate-fade-in-up-delayed-3">
-                    <p id="quote-text" class="transition-opacity duration-500 relative px-8">
-                        <span class="absolute left-0 text-blue-400/50 text-4xl leading-none">"</span>
-                        <span class="inline-block"></span>
-                        <span class="absolute right-0 text-green-400/50 text-4xl leading-none">"</span>
-                    </p>
+                
+                <div class="flex items-center justify-center gap-6 animate-fade-in-up-delayed-3">
+                    <a href="projects.html" class="ios-button bg-gradient-to-r from-blue-600 to-green-600 text-white px-10 py-4 rounded-2xl shadow-lg hover:shadow-xl transition-all flex items-center gap-3 text-lg font-semibold">
+                        <i class="fas fa-code text-xl"></i>
+                        <span>View Projects</span>
+                    </a>
+                    <a href="documents.html" class="ios-button bg-gray-800/80 backdrop-blur-xl border border-blue-500/50 text-white px-10 py-4 rounded-2xl shadow-lg hover:shadow-xl hover:border-green-500/50 transition-all flex items-center gap-3 text-lg font-semibold">
+                        <i class="fas fa-file-alt text-xl"></i>
+                        <span>View Documents</span>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 px-12 bg-gray-800/50" style="width: 1920px; max-width: 1920px; margin: 0 auto;">
+    <section id="about" class="py-16 px-12 bg-gray-900" style="width: 1920px; max-width: 1920px; margin: 0 auto;">
         <div class="w-full max-w-[1920px] mx-auto">
             <h2 class="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">About Me</h2>
             <div class="max-w-6xl mx-auto">
@@ -118,11 +118,7 @@
                         <!-- Bio (No Box) -->
                         <div class="mb-8">
                             <p class="text-lg text-gray-300 leading-relaxed mb-6">
-                                A motivated and aspiring Full Stack Developer with growing experience in front-end and back-end
-development, UI design, and modern development tools. Adaptable and eager to learn, with a strong
-desire to explore new technologies and continuously improve skills. Demonstrates the ability to work
-independently or in a team, accept constructive criticism, and deliver tasks with reliability and
-dedication. Committed to professional growth and career advancement in the field of Information
+                                I am an aspiring Full Stack Developer with growing experience in front-end and back-end development, UI design, and modern development tools. I enjoy learning new technologies and continuously improving my skills to build efficient and user-friendly applications. I am adaptable, eager to learn, and capable of working independently or collaboratively in a team. I welcome constructive criticism and take pride in delivering tasks with reliability, dedication, and attention to detail. I am committed to professional growth and pursuing a successful career in the field of Information Technology.
 Technology.
                             </p>
                             <p class="text-lg text-gray-300 leading-relaxed">
@@ -192,7 +188,7 @@ Technology.
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-16 px-12 bg-gray-800/50" style="width: 1920px; max-width: 1920px; margin: 0 auto;">
+    <section id="skills" class="py-16 px-12 bg-gray-900" style="width: 1920px; max-width: 1920px; margin: 0 auto;">
         <div class="w-full max-w-[1920px] mx-auto">
             <h2 class="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">Skills & Technologies</h2>
             <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-green-400 mx-auto mb-16 rounded-full"></div>
@@ -252,121 +248,8 @@ Technology.
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 px-12" style="width: 1920px; max-width: 1920px; margin: 0 auto;">
-        <div class="w-full max-w-[1920px] mx-auto">
-            <h2 class="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Featured Projects</h2>
-            <div class="grid grid-cols-3 gap-10 max-w-7xl mx-auto">
-                <div class="ios-card overflow-hidden group hover:scale-105 transition-transform">
-                    <div class="h-56 relative overflow-hidden">
-                        <img src="inventory-system.jpg" alt="Crochetel's Inventory System" class="w-full h-full object-cover blur-sm group-hover:blur-none transition-all duration-300">
-                        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/30 to-blue-700/30"></div>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold mb-3 text-gray-200">Crochetel's Inventory System</h3>
-                        <p class="text-lg text-gray-400 mb-5">The Crochetel Inventory System is a simple, user-friendly solution designed specifically for small crochet businesses. It helps owners efficiently manage their products, materials, and sales without requiring advanced technical skills.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm">Laravel</span>
-                            <span class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm">PHP</span>
-                            <span class="px-3 py-1 bg-green-900/50 text-green-300 rounded-full text-sm">MySQL</span>
-                        </div>
-                        <div class="flex gap-3">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="ios-card overflow-hidden group hover:scale-105 transition-transform">
-                    <div class="h-56 relative overflow-hidden">
-                        <img src="complaint-system.jpg" alt="Complaint Management System" class="w-full h-full object-cover blur-sm group-hover:blur-none transition-all duration-300">
-                        <div class="absolute inset-0 bg-gradient-to-br from-green-600/30 to-green-700/30"></div>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold mb-3 text-gray-200">Complaint Management System</h3>
-                        <p class="text-lg text-gray-400 mb-5">An efficient system for managing and tracking teachers and students complaints with status updates and resolution tracking.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm">Laravel</span>
-                            <span class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm">Tailwind CSS</span>
-                            <span class="px-3 py-1 bg-green-900/50 text-green-300 rounded-full text-sm">MySQL</span>
-                        </div>
-                        <div class="flex gap-3">
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="ios-card overflow-hidden group hover:scale-105 transition-transform">
-                    <div class="h-56 relative overflow-hidden">
-                        <img src="portfolio-project.jpg" alt="Online Portfolio" class="w-full h-full object-cover blur-sm group-hover:blur-none transition-all duration-300">
-                        <div class="absolute inset-0 bg-gradient-to-br from-blue-600/30 via-green-600/30 to-blue-700/30"></div>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold mb-3 text-gray-200">Online Portfolio</h3>
-                        <p class="text-lg text-gray-400 mb-5">A modern, responsive portfolio website showcasing my projects, skills, and achievements with an iOS-inspired design and smooth animations.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm">HTML</span>
-                            <span class="px-3 py-1 bg-blue-900/50 text-blue-300 rounded-full text-sm">Tailwind CSS</span>
-                            <span class="px-3 py-1 bg-green-900/50 text-green-300 rounded-full text-sm">JavaScript</span>
-                        </div>
-                        <div class="flex gap-3">
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Documents & Certificates Section -->
-    <section id="documents" class="py-16 px-12 bg-gray-800/50" style="width: 1920px; max-width: 1920px; margin: 0 auto;">
-        <div class="w-full max-w-[1920px] mx-auto">
-            <h2 class="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Documents & Certificates</h2>
-            <div class="grid grid-cols-3 gap-8">
-                <!-- Document Card 1 -->
-                <div class="ios-glass-card group cursor-pointer">
-                    <div class="p-6">
-                        <div class="w-16 h-16 mb-4 rounded-2xl bg-gradient-to-br from-blue-500/20 to-green-500/20 backdrop-blur-xl flex items-center justify-center border border-blue-500/30">
-                            <i class="fas fa-file-pdf text-3xl text-blue-400"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2 text-gray-200">Resume</h3>
-                        <p class="text-gray-400 text-sm mb-4">View my resume</p>
-                        <button id="view-resume-btn" class="ios-glass-button w-full py-3 rounded-xl text-sm font-medium text-gray-200 hover:text-white transition-all">
-                            <i class="fas fa-eye mr-2"></i>View Resume
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Document Card 2 -->
-                <div class="ios-glass-card group cursor-pointer">
-                    <div class="p-6">
-                        <div class="w-16 h-16 mb-4 rounded-2xl bg-gradient-to-br from-green-500/20 to-blue-500/20 backdrop-blur-xl flex items-center justify-center border border-green-500/30">
-                            <i class="fas fa-file-alt text-3xl text-green-400"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2 text-gray-200">Application/Cover Letter</h3>
-                        <p class="text-gray-400 text-sm mb-4">View my cover letters</p>
-                        <button id="view-cover-letters-btn" class="ios-glass-button w-full py-3 rounded-xl text-sm font-medium text-gray-200 hover:text-white transition-all">
-                            <i class="fas fa-eye mr-2"></i>View Letters
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Document Card 3 -->
-                <div class="ios-glass-card group cursor-pointer">
-                    <div class="p-6">
-                        <div class="w-16 h-16 mb-4 rounded-2xl bg-gradient-to-br from-blue-500/20 to-green-500/20 backdrop-blur-xl flex items-center justify-center border border-blue-500/30">
-                            <i class="fas fa-certificate text-3xl text-blue-400"></i>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-2 text-gray-200">Certifications</h3>
-                        <p class="text-gray-400 text-sm mb-4">View my certifications</p>
-                        <button id="view-certificates-btn" class="ios-glass-button w-full py-3 rounded-xl text-sm font-medium text-gray-200 hover:text-white transition-all">
-                            <i class="fas fa-eye mr-2"></i>View Certificates
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Contact Section -->
-    <section id="contact" class="py-16 px-12 bg-gray-800/50" style="width: 1920px; max-width: 1920px; margin: 0 auto;">
+    <section id="contact" class="py-16 px-12 bg-gray-900" style="width: 1920px; max-width: 1920px; margin: 0 auto;">
         <div class="w-full max-w-[1920px] mx-auto">
             <h2 class="text-5xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">Get In Touch</h2>
             <div class="max-w-6xl mx-auto grid grid-cols-2 gap-8">
@@ -418,89 +301,11 @@ Technology.
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 px-12 border-t border-gray-700 bg-gray-800/50" style="width: 1920px; max-width: 1920px; margin: 0 auto;">
+    <footer class="py-8 px-12 border-t border-gray-700 bg-gray-900" style="width: 1920px; max-width: 1920px; margin: 0 auto;">
         <div class="w-full max-w-[1920px] mx-auto text-center text-gray-400">
             <p>&copy; 2026 Aeron.xyz. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- Resume Modal -->
-    <div id="resume-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm">
-        <div class="relative max-w-6xl w-full mx-4 max-h-[90vh] overflow-auto">
-            <button id="close-resume-modal" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center text-gray-300 hover:text-white transition-colors">
-                <i class="fas fa-times text-xl"></i>
-            </button>
-            <div class="ios-card p-6">
-                <h3 class="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">My Resume</h3>
-                <div class="grid grid-cols-2 gap-6" id="resume-grid">
-                    <!-- Resume images will be added here -->
-                    <div class="ios-glass-card p-4 overflow-hidden group">
-                        <img src="resume1.jpg" alt="Resume 1" class="w-full h-auto rounded-lg hover:scale-105 transition-transform cursor-pointer">
-                    </div>
-                    <div class="ios-glass-card p-4 overflow-hidden group">
-                        <img src="resume2.jpg" alt="Resume 2" class="w-full h-auto rounded-lg hover:scale-105 transition-transform cursor-pointer">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Certificates Modal -->
-    <div id="certificates-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm">
-        <div class="relative max-w-6xl w-full mx-4 max-h-[90vh] overflow-auto">
-            <button id="close-certificates-modal" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center text-gray-300 hover:text-white transition-colors">
-                <i class="fas fa-times text-xl"></i>
-            </button>
-            <div class="ios-card p-6">
-                <h3 class="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">My Certifications</h3>
-                <div class="grid grid-cols-2 gap-6" id="certificates-grid">
-                    <!-- Certificate images will be added here -->
-                    <div class="ios-glass-card p-4 overflow-hidden group">
-                        <img src="certificate1.jpg" alt="Certificate 1" class="w-full h-auto rounded-lg hover:scale-105 transition-transform cursor-pointer">
-                    </div>
-                    <div class="ios-glass-card p-4 overflow-hidden group">
-                        <img src="certificate2.jpg" alt="Certificate 2" class="w-full h-auto rounded-lg hover:scale-105 transition-transform cursor-pointer">
-                    </div>
-                    <div class="ios-glass-card p-4 overflow-hidden group">
-                        <img src="certificate3.jpg" alt="Certificate 3" class="w-full h-auto rounded-lg hover:scale-105 transition-transform cursor-pointer">
-                    </div>
-                    <div class="ios-glass-card p-4 overflow-hidden group">
-                        <img src="certificate4.jpg" alt="Certificate 4" class="w-full h-auto rounded-lg hover:scale-105 transition-transform cursor-pointer">
-                    </div>
-                    <div class="ios-glass-card p-4 overflow-hidden group">
-                        <img src="certificate5.jpg" alt="Certificate 5" class="w-full h-auto rounded-lg hover:scale-105 transition-transform cursor-pointer">
-                    </div>
-                    <div class="ios-glass-card p-4 overflow-hidden group">
-                        <img src="certificate6.jpg" alt="Certificate 6" class="w-full h-auto rounded-lg hover:scale-105 transition-transform cursor-pointer">
-                    </div>
-                    <div class="ios-glass-card p-4 overflow-hidden group">
-                        <img src="certificate7.jpg" alt="Certificate 7" class="w-full h-auto rounded-lg hover:scale-105 transition-transform cursor-pointer">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Cover Letters Modal -->
-    <div id="cover-letters-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm">
-        <div class="relative max-w-6xl w-full mx-4 max-h-[90vh] overflow-auto">
-            <button id="close-cover-letters-modal" class="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center text-gray-300 hover:text-white transition-colors">
-                <i class="fas fa-times text-xl"></i>
-            </button>
-            <div class="ios-card p-6">
-                <h3 class="text-3xl font-bold text-center mb-8 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">My Cover Letters</h3>
-                <div class="grid grid-cols-2 gap-6" id="cover-letters-grid">
-                    <!-- Cover letter images will be added here -->
-                    <div class="ios-glass-card p-4 overflow-hidden group">
-                        <img src="cover-letter1.jpg" alt="Cover Letter 1" class="w-full h-auto rounded-lg hover:scale-105 transition-transform cursor-pointer">
-                    </div>
-                    <div class="ios-glass-card p-4 overflow-hidden group">
-                        <img src="cover-letter2.jpg" alt="Cover Letter 2" class="w-full h-auto rounded-lg hover:scale-105 transition-transform cursor-pointer">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>

@@ -20,13 +20,22 @@ if (mobileMenuBtn && mobileMenu) {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        const target = document.querySelector(href);
         if (target) {
-            const offsetTop = target.offsetTop - 80;
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
+            // For home, scroll to top immediately
+            if (href === '#home') {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            } else {
+                const offsetTop = target.offsetTop - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
             // Close mobile menu if open
             if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.add('hidden');
@@ -242,15 +251,15 @@ function showNotification(message, type = 'success') {
     }, 3000);
 }
 
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('#home');
-    if (hero) {
-        hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-        hero.style.opacity = 1 - scrolled / 500;
-    }
-});
+// Parallax effect for hero section (disabled to prevent navigation issues)
+// window.addEventListener('scroll', () => {
+//     const scrolled = window.pageYOffset;
+//     const hero = document.querySelector('#home');
+//     if (hero) {
+//         hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+//         hero.style.opacity = 1 - scrolled / 500;
+//     }
+// });
 
 // Add ripple effect to buttons
 document.querySelectorAll('.ios-button').forEach(button => {
@@ -305,43 +314,10 @@ document.head.appendChild(style);
 
 // Changing text animation for technologies
 const technologies = ['HTML', 'Tailwind CSS', 'JavaScript'];
-const itQuotes = [
-    "Code is like humor. When you have to explain it, it's bad.",
-    "First, solve the problem. Then, write the code.",
-    "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
-    "Programming isn't about what you know; it's about what you can figure out."
-];
 
 let techIndex = 0;
-let quoteIndex = 0;
 const changingTextEl = document.getElementById('changing-text');
-const quoteTextEl = document.getElementById('quote-text');
 
-function animateTextChange(element, newText, callback) {
-    if (element.id === 'quote-text') {
-        const quoteSpan = element.querySelector('span.inline-block');
-        if (quoteSpan) {
-            quoteSpan.style.opacity = '0';
-            quoteSpan.style.transform = 'translateY(20px)';
-            setTimeout(() => {
-                quoteSpan.textContent = newText;
-                quoteSpan.style.opacity = '1';
-                quoteSpan.style.transform = 'translateY(0)';
-                if (callback) callback();
-            }, 300);
-            return;
-        }
-    }
-    element.style.opacity = '0';
-    element.style.transform = 'translateY(20px)';
-    
-    setTimeout(() => {
-        element.textContent = newText;
-        element.style.opacity = '1';
-        element.style.transform = 'translateY(0)';
-        if (callback) callback();
-    }, 300);
-}
 
 let isTyping = false;
 let currentText = '';
@@ -378,12 +354,6 @@ function typeTechnology() {
     }
 }
 
-function changeQuote() {
-    if (quoteTextEl) {
-        quoteIndex = (quoteIndex + 1) % itQuotes.length;
-        animateTextChange(quoteTextEl, itQuotes[quoteIndex]);
-    }
-}
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
@@ -397,16 +367,6 @@ document.addEventListener('DOMContentLoaded', () => {
         changingTextEl.textContent = '';
         changingTextEl.style.transition = 'none';
         typeTechnology(); // Start typing animation
-    }
-    
-    // Initialize quotes
-    if (quoteTextEl) {
-        const quoteSpan = quoteTextEl.querySelector('span.inline-block');
-        if (quoteSpan) {
-            quoteSpan.textContent = itQuotes[0];
-            quoteSpan.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-        }
-        setInterval(changeQuote, 4000); // Change every 4 seconds
     }
     
     // Resume Modal functionality
