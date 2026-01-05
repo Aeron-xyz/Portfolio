@@ -58,4 +58,3 @@ Works on all modern browsers:
 ## License
 
 Feel free to use this portfolio template for your personal or commercial projects!
-
